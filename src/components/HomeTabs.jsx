@@ -12,10 +12,10 @@ function HomeTabs() {
     const slotCode = gameTypes[0]?.code;
     const casinos = gameTypes[1]?.products;
     const casinoCode = gameTypes[1]?.code;
-    const sports = gameTypes[2]?.products;
-    const sportCode = gameTypes[2]?.code;
-    const fishes = gameTypes[3]?.products;
-    const fishCode = gameTypes[3]?.code;
+    // const sports = gameTypes[2]?.products;
+    // const sportCode = gameTypes[2]?.code;
+    const fishes = gameTypes[2]?.products;
+    const fishCode = gameTypes[2]?.code;
 
     const lauchGame = (productCode, gameTypeCode) => {
         console.log('productCode', productCode)
@@ -102,7 +102,7 @@ function HomeTabs() {
                                 })}
                             </div>
                         </div>
-                        <div className='mb-4'>
+                        {/* <div className='mb-4'>
                             <h3 className='ms-2' >Sport Book</h3>
                             <div className="row px-2">
                                 {sports?.map((item) => {
@@ -113,7 +113,7 @@ function HomeTabs() {
                                     </div>
                                 })}
                             </div>
-                        </div>
+                        </div> */}
                         <div className='mb-4'>
                             <h3 className='ms-2' >Fishing</h3>
                             <div className="row px-2">
@@ -149,7 +149,7 @@ function HomeTabs() {
                             })}
                         </div>
                     </Tab.Pane>
-                    <Tab.Pane eventKey={3}>
+                    {/* <Tab.Pane eventKey={3}>
                         <div className="row px-2">
                             {sports?.map((item) => {
                                 return <div key={item.id} className="col-4 col-md-3 col-xl-2 cursorPointer mb-2 mb-md-3">
@@ -159,7 +159,7 @@ function HomeTabs() {
                                 </div>
                             })}
                         </div>
-                    </Tab.Pane>
+                    </Tab.Pane> */}
                     <Tab.Pane eventKey={4}>
                         <div className="row px-2">
                             {fishes?.map((item) => {
