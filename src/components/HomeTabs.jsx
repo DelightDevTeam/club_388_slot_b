@@ -8,13 +8,15 @@ import BASE_URL from '../hooks/baseURL';
 
 function HomeTabs() {
     const { data: gameTypes } = useFetch(BASE_URL + "/gameType");
-    const slots = gameTypes[0]?.products;
+    const { data: slotGame } = useFetch(BASE_URL + "/gameTypeProducts/1");
+    const { data: casinoGame } = useFetch(BASE_URL + "/gameTypeProducts/2");
+    const { data: fishGame } = useFetch(BASE_URL + "/gameTypeProducts/4");
+
+    const slots = slotGame?.products;
     const slotCode = gameTypes[0]?.code;
-    const casinos = gameTypes[1]?.products;
+    const casinos = casinoGame?.products;
     const casinoCode = gameTypes[1]?.code;
-    // const sports = gameTypes[2]?.products;
-    // const sportCode = gameTypes[2]?.code;
-    const fishes = gameTypes[2]?.products;
+    const fishes = fishGame?.products;
     const fishCode = gameTypes[2]?.code;
 
     const lauchGame = (productCode, gameTypeCode) => {
